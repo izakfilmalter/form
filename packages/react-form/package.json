@@ -88,13 +88,13 @@
     "decode-formdata": "^0.8.0"
   },
   "devDependencies": {
-    "@tanstack/start": "^1.81.1",
+    "@tanstack/start": "^1.82.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "vite": "^5.4.10"
+    "vite": "^5.4.11"
   },
   "peerDependencies": {
     "@tanstack/start": "^1.43.13",
