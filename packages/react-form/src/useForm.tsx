@@ -1,9 +1,9 @@
 import { FormApi, functionalUpdate } from '@tanstack/form-core'
 import { useStore } from '@tanstack/react-store'
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 import { Field } from './useField'
 import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect'
-import type {PropsWithChildren} from 'react';
+import type { PropsWithChildren } from 'react'
 import type { FieldComponent, UseField } from './useField'
 import type { NoInfer } from '@tanstack/react-store'
 import type { FormOptions, FormState, Validator } from '@tanstack/form-core'
