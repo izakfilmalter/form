@@ -25,7 +25,7 @@ A React component to render form fields. With this, you can render and manage in
 
 #### Defined in
 
-[useForm.tsx:21](https://github.com/TanStack/form/blob/main/packages/react-form/src/useForm.tsx#L21)
+[useForm.tsx:22](https://github.com/TanStack/form/blob/main/packages/react-form/src/useForm.tsx#L22)
 
 ***
 
@@ -67,7 +67,7 @@ type (or `unknown` if that's not defined).
 
 #### Defined in
 
-[useForm.tsx:35](https://github.com/TanStack/form/blob/main/packages/react-form/src/useForm.tsx#L35)
+[useForm.tsx:36](https://github.com/TanStack/form/blob/main/packages/react-form/src/useForm.tsx#L36)
 
 ***
 
@@ -81,7 +81,7 @@ A custom React hook that provides functionalities related to individual form fie
 
 #### Defined in
 
-[useForm.tsx:25](https://github.com/TanStack/form/blob/main/packages/react-form/src/useForm.tsx#L25)
+[useForm.tsx:26](https://github.com/TanStack/form/blob/main/packages/react-form/src/useForm.tsx#L26)
 
 ***
 
@@ -107,4 +107,4 @@ A `useStore` hook that connects to the internal store of the form. It can be use
 
 #### Defined in
 
-[useForm.tsx:29](https://github.com/TanStack/form/blob/main/packages/react-form/src/useForm.tsx#L29)
+[useForm.tsx:30](https://github.com/TanStack/form/blob/main/packages/react-form/src/useForm.tsx#L30)
