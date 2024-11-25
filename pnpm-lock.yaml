@@ -1144,6 +1144,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.3.3
         version: 4.3.3(vite@5.4.10(@types/node@20.17.5)(less@4.2.0)(sass@1.80.5)(sugarss@4.0.1(postcss@8.4.48))(terser@5.36.0))
+      eslint-plugin-react-compiler:
+        specifier: ^19.0.0-beta-0dec889-20241115
+        version: 19.0.0-beta-0dec889-20241115(eslint@9.14.0(jiti@2.4.0))
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -19831,7 +19834,7 @@ snapshots:
       mkdirp: 1.0.4
       yallist: 4.0.0
 
-  terser-webpack-plugin@5.3.10(@swc/core@1.7.42(@swc/helpers@0.5.13))(esbuild@0.23.1)(webpack@5.94.0(@swc/core@1.7.42(@swc/helpers@0.5.13))(esbuild@0.20.1)):
+  terser-webpack-plugin@5.3.10(@swc/core@1.7.42(@swc/helpers@0.5.13))(esbuild@0.23.1)(webpack@5.94.0(@swc/core@1.7.42(@swc/helpers@0.5.13))(esbuild@0.23.1)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
@@ -20755,7 +20758,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(@swc/core@1.7.42(@swc/helpers@0.5.13))(esbuild@0.23.1)(webpack@5.94.0(@swc/core@1.7.42(@swc/helpers@0.5.13))(esbuild@0.20.1))
+      terser-webpack-plugin: 5.3.10(@swc/core@1.7.42(@swc/helpers@0.5.13))(esbuild@0.23.1)(webpack@5.94.0(@swc/core@1.7.42(@swc/helpers@0.5.13))(esbuild@0.23.1))
       watchpack: 2.4.2
       webpack-sources: 3.2.3
     transitivePeerDependencies:
