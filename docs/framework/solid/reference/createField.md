@@ -1,25 +1,27 @@
 ---
-id: createField
-title: createField
+id: CreateField
+title: CreateField
 ---
 
-# Function: createField()
+# Type Alias: CreateField()\<TParentData, TFormValidator\>
 
 ```ts
-function createField<TParentData, TName, TFieldValidator, TFormValidator, TData>(opts): () => never
+type CreateField<TParentData, TFormValidator>: <TName, TFieldValidator, TData>(opts) => () => FieldApi<TParentData, TName, TFieldValidator, TFormValidator, TData> & SolidFieldApi<TParentData, TFormValidator>;
 ```
 
 ## Type Parameters
 
 • **TParentData**
 
-• **TName** *extends* `string` \| `number`
+• **TFormValidator** *extends* `Validator`\<`TParentData`, `unknown`\> \| `undefined` = `undefined`
 
-• **TFieldValidator** *extends* `undefined` \| `Validator`\<`DeepValue`\<`TParentData`, `TName`\>, `unknown`\> = `undefined`
+## Type Parameters
 
-• **TFormValidator** *extends* `undefined` \| `Validator`\<`TParentData`, `unknown`\> = `undefined`
+• **TName** *extends* `DeepKeys`\<`TParentData`\>
 
-• **TData** = `DeepValue`\<`TParentData`, `TName`\>
+• **TFieldValidator** *extends* `Validator`\<`DeepValue`\<`TParentData`, `TName`\>, `unknown`\> \| `undefined` = `undefined`
+
+• **TData** *extends* `DeepValue`\<`TParentData`, `TName`\> = `DeepValue`\<`TParentData`, `TName`\>
 
 ## Parameters
 
@@ -31,8 +33,8 @@ function createField<TParentData, TName, TFieldValidator, TFormValidator, TData>
 
 ### Returns
 
-`never`
+`FieldApi`\<`TParentData`, `TName`, `TFieldValidator`, `TFormValidator`, `TData`\> & `SolidFieldApi`\<`TParentData`, `TFormValidator`\>
 
 ## Defined in
 
-[createField.tsx:87](https://github.com/TanStack/form/blob/a6313b7699753752ae30ff16c169e0b08c2369e8/packages/solid-form/src/createField.tsx#L87)
+[createField.tsx:29](https://github.com/TanStack/form/blob/a6313b7699753752ae30ff16c169e0b08c2369e8/packages/solid-form/src/createField.tsx#L29)

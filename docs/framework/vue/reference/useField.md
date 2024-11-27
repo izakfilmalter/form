@@ -1,29 +1,31 @@
 ---
-id: useField
-title: useField
+id: UseField
+title: UseField
 ---
 
-# Function: useField()
+# Type Alias: UseField()\<TParentData, TFormValidator\>
 
 ```ts
-function useField<TParentData, TName, TFieldValidator, TFormValidator, TData>(opts): object
+type UseField<TParentData, TFormValidator>: <TName, TFieldValidator, TData>(opts) => object;
 ```
 
 ## Type Parameters
 
 • **TParentData**
 
-• **TName** *extends* `string` \| `number`
+• **TFormValidator** *extends* `Validator`\<`TParentData`, `unknown`\> \| `undefined` = `undefined`
 
-• **TFieldValidator** *extends* `undefined` \| `Validator`\<`DeepValue`\<`TParentData`, `TName`\>, `unknown`\> = `undefined`
+## Type Parameters
 
-• **TFormValidator** *extends* `undefined` \| `Validator`\<`TParentData`, `unknown`\> = `undefined`
+• **TName** *extends* `DeepKeys`\<`TParentData`\>
 
-• **TData** = `DeepValue`\<`TParentData`, `TName`\>
+• **TFieldValidator** *extends* `Validator`\<`DeepValue`\<`TParentData`, `TName`\>, `unknown`\> \| `undefined` = `undefined`
+
+• **TData** *extends* `DeepValue`\<`TParentData`, `TName`\> = `DeepValue`\<`TParentData`, `TName`\>
 
 ## Parameters
 
-• **opts**: `UseFieldOptions`\<`TParentData`, `TName`, `TFieldValidator`, `TFormValidator`, `TData`\>
+• **opts**: `Omit`\<`UseFieldOptions`\<`TParentData`, `TName`, `TFieldValidator`, `TFormValidator`, `TData`\>, `"form"`\>
 
 ## Returns
 
@@ -32,15 +34,15 @@ function useField<TParentData, TName, TFieldValidator, TFormValidator, TData>(op
 ### api
 
 ```ts
-readonly api: FieldApi<TParentData, TName, TFieldValidator, TFormValidator, TData> & VueFieldApi<TParentData, TFormValidator> = fieldApi;
+api: FieldApi<TParentData, TName, TFieldValidator, TFormValidator, TData> & VueFieldApi<TParentData, TFormValidator>;
 ```
 
 ### state
 
 ```ts
-readonly state: Readonly<Ref<FieldState<TData>>> = fieldState;
+state: Readonly<Ref<FieldApi<TParentData, TName, TFieldValidator, TFormValidator, TData>["state"]>>;
 ```
 
 ## Defined in
 
-[packages/vue-form/src/useField.tsx:49](https://github.com/TanStack/form/blob/a6313b7699753752ae30ff16c169e0b08c2369e8/packages/vue-form/src/useField.tsx#L49)
+[packages/vue-form/src/useField.tsx:17](https://github.com/TanStack/form/blob/a6313b7699753752ae30ff16c169e0b08c2369e8/packages/vue-form/src/useField.tsx#L17)

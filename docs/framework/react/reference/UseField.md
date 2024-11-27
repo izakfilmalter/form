@@ -1,40 +1,40 @@
 ---
-id: UseField
-title: UseField
+id: useField
+title: useField
 ---
 
-# Type Alias: UseField()\<TParentData, TFormValidator\>
+# Function: useField()
 
 ```ts
-type UseField<TParentData, TFormValidator>: <TName, TFieldValidator, TData>(opts) => FieldApi<TParentData, TName, TFieldValidator, TFormValidator, TData>;
+function useField<TParentData, TName, TFieldValidator, TFormValidator, TData>(opts): FieldApi<TParentData, TName, TFieldValidator, TFormValidator, TData> & ReactFieldApi<TParentData, TFormValidator>
 ```
 
-A type representing a hook for using a field in a form with the given form data type.
-
-A function that takes an optional object with a `name` property and field options, and returns a `FieldApi` instance for the specified field.
+A hook for managing a field in a form.
 
 ## Type Parameters
 
 • **TParentData**
 
-• **TFormValidator** *extends* `Validator`\<`TParentData`, `unknown`\> \| `undefined` = `undefined`
+• **TName** *extends* `string` \| `number`
 
-## Type Parameters
+• **TFieldValidator** *extends* `undefined` \| `Validator`\<`DeepValue`\<`TParentData`, `TName`\>, `unknown`\> = `undefined`
 
-• **TName** *extends* `DeepKeys`\<`TParentData`\>
+• **TFormValidator** *extends* `undefined` \| `Validator`\<`TParentData`, `unknown`\> = `undefined`
 
-• **TFieldValidator** *extends* `Validator`\<`DeepValue`\<`TParentData`, `TName`\>, `unknown`\> \| `undefined` = `undefined`
-
-• **TData** *extends* `DeepValue`\<`TParentData`, `TName`\> = `DeepValue`\<`TParentData`, `TName`\>
+• **TData** = `DeepValue`\<`TParentData`, `TName`\>
 
 ## Parameters
 
-• **opts**: `Omit`\<`UseFieldOptions`\<`TParentData`, `TName`, `TFieldValidator`, `TFormValidator`, `TData`\>, `"form"`\>
+• **opts**: `UseFieldOptions`\<`TParentData`, `TName`, `TFieldValidator`, `TFormValidator`, `TData`\>
+
+An object with field options.
 
 ## Returns
 
-`FieldApi`\<`TParentData`, `TName`, `TFieldValidator`, `TFormValidator`, `TData`\>
+`FieldApi`\<`TParentData`, `TName`, `TFieldValidator`, `TFormValidator`, `TData`\> & `ReactFieldApi`\<`TParentData`, `TFormValidator`\>
+
+The `FieldApi` instance for the specified field.
 
 ## Defined in
 
-[useField.tsx:25](https://github.com/TanStack/form/blob/a6313b7699753752ae30ff16c169e0b08c2369e8/packages/react-form/src/useField.tsx#L25)
+[useField.tsx:49](https://github.com/TanStack/form/blob/a6313b7699753752ae30ff16c169e0b08c2369e8/packages/react-form/src/useField.tsx#L49)
